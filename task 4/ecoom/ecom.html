@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Hub - Fresh Products Delivered</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> +1 (234) 567-8900</span>
+                    <span><i class="fas fa-envelope"></i> hello@groceryhub.com</span>
+                </div>
+                <div class="auth-links">
+                    <a href="#">Login</a>
+                    <a href="#">Register</a>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-shopping-basket"></i>
+                    <span>GroceryHub</span>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for products...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="nav-icons">
+                    <a href="#"><i class="fas fa-heart"></i></a>
+                    <a href="#" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <div class="hamburger">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Fresh Groceries Delivered to Your Door</h1>
+                    <p>Shop the freshest produce, dairy, meats and more with convenient home delivery</p>
+                    <a href="#products" class="btn">Shop Now</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories">
+            <div class="container">
+                <h2 class="section-title">Shop by Category</h2>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <img src="https://via.placeholder.com/300x200?text=Fruits" alt="Fruits">
+                        <h3>Fresh Fruits</h3>
+                        <a href="#" class="btn btn-small">View All</a>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://via.placeholder.com/300x200?text=Vegetables" alt="Vegetables">
+                        <h3>Vegetables</h3>
+                        <a href="#" class="btn btn-small">View All</a>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://via.placeholder.com/300x200?text=Dairy" alt="Dairy">
+                        <h3>Dairy & Eggs</h3>
+                        <a href="#" class="btn btn-small">View All</a>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://via.placeholder.com/300x200?text=Meat" alt="Meat">
+                        <h3>Meat & Poultry</h3>
+                        <a href="#" class="btn btn-small">View All</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products" id="products">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Products</h2>
+                    <div class="filter-options">
+                        <select id="category-filter">
+                            <option value="all">All Categories</option>
+                            <option value="fruits">Fruits</option>
+                            <option value="vegetables">Vegetables</option>
+                            <option value="dairy">Dairy</option>
+                            <option value="meat">Meat</option>
+                        </select>
+                        <select id="sort-by">
+                            <option value="default">Sort By</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="name">Name: A-Z</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="product-grid" id="product-grid">
+                    <!-- Products will be loaded via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section class="deal-of-the-day">
+            <div class="container">
+                <h2 class="section-title">Deal of the Day</h2>
+                <div class="deal-content">
+                    <div class="deal-image">
+                        <img src="https://via.placeholder.com/500x400?text=Special+Offer" alt="Deal of the Day">
+                        <div class="deal-badge">50% OFF</div>
+                    </div>
+                    <div class="deal-info">
+                        <h3>Organic Avocados</h3>
+                        <div class="price">
+                            <span class="original-price">$4.99</span>
+                            <span class="sale-price">$2.49</span>
+                        </div>
+                        <p>Fresh organic avocados, perfect for guacamole or toast. Limited time offer!</p>
+                        <div class="countdown">
+                            <h4>Offer ends in:</h4>
+                            <div class="timer">
+                                <span id="hours">12</span>h
+                                <span id="minutes">45</span>m
+                                <span id="seconds">30</span>s
+                            </div>
+                        </div>
+                        <button class="btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"The quality of produce is always excellent and delivery is super fast!"</p>
+                        <div class="customer">
+                            <img src="https://via.placeholder.com/50" alt="Customer">
+                            <span>Sarah Johnson</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p>"I love the convenience of shopping online and the prices are very competitive."</p>
+                        <div class="customer">
+                            <img src="https://via.placeholder.com/50" alt="Customer">
+                            <span>Michael Chen</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Best grocery delivery service I've used. Highly recommend!"</p>
+                        <div class="customer">
+                            <img src="https://via.placeholder.com/50" alt="Customer">
+                            <span>Emma Rodriguez</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>GroceryHub</h3>
+                    <p>Your one-stop shop for fresh groceries delivered to your doorstep.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Order Tracking</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Grocery St, Foodville</li>
+                        <li><i class="fas fa-phone"></i> +1 (234) 567-8900</li>
+                        <li><i class="fas fa-envelope"></i> hello@groceryhub.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 GroceryHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
