@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#121212">
+    <title>Interactive Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <header>
+            <h1>Trivia Challenge</h1>
+            <div class="score-time">
+                <span class="score">Score: <span id="score">0</span></span>
+                <span class="time">Time: <span id="time">30</span>s</span>
+            </div>
+        </header>
+        
+        <div class="quiz-intro" id="intro">
+            <h2>Test Your Knowledge!</h2>
+            <p>You'll get 10 random questions. Each correct answer gives you 10 points.</p>
+            <p>You have 30 seconds to answer each question.</p>
+            <div class="category-select">
+                <label for="category">Select Category:</label>
+                <select id="category">
+                    <option value="9">General Knowledge</option>
+                    <option value="18">Computers</option>
+                    <option value="21">Sports</option>
+                    <option value="23">History</option>
+                    <option value="27">Animals</option>
+                </select>
+            </div>
+            <button id="start-btn" class="btn">Start Quiz</button>
+        </div>
+        
+        <div class="quiz-questions" id="quiz" style="display: none;">
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <h2 id="question">Question goes here</h2>
+            <div class="options" id="options">
+            </div>
+            <button id="next-btn" class="btn" style="display: none;">Next Question</button>
+        </div>
+        
+        <div class="quiz-result" id="result" style="display: none;">
+            <h2>Quiz Completed!</h2>
+            <p>Your final score is <span id="final-score">0</span> out of 100</p>
+            <div class="result-details">
+                <p>Correct: <span id="correct">0</span></p>
+                <p>Incorrect: <span id="incorrect">0</span></p>
+            </div>
+            <button id="restart-btn" class="btn">Try Again</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

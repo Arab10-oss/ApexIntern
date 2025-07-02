@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Quiz Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    
+    <div class="quiz-container">
+        <div class="particles" id="particles-js"></div>
+        
+        <header>
+            <div class="logo">
+                <i class="fas fa-rocket"></i>
+                <h1>Cosmic Quiz</h1>
+            </div>
+            <div class="score-time">
+                <div class="score-container">
+                    <i class="fas fa-star"></i>
+                    <span class="score">Score: <span id="score">0</span></span>
+                </div>
+                <div class="time-container">
+                    <i class="fas fa-clock"></i>
+                    <span class="time">Time: <span id="time">30</span>s</span>
+                </div>
+            </div>
+        </header>
+        
+        <div class="quiz-intro" id="intro">
+            <div class="intro-graphic">
+                <div class="planet"></div>
+                <div class="ring"></div>
+                <div class="satellite"></div>
+            </div>
+            <h2>Space Knowledge Challenge</h2>
+            <p>Test your cosmic knowledge with 10 stellar questions from across the universe!</p>
+            
+            <div class="category-select">
+                <div class="select-wrapper">
+                    <i class="fas fa-globe"></i>
+                    <select id="category">
+                        <option value="9">General Knowledge</option>
+                        <option value="18">Computers</option>
+                        <option value="21">Sports</option>
+                        <option value="23">History</option>
+                        <option value="17">Science & Nature</option>
+                        <option value="25">Art</option>
+                    </select>
+                </div>
+            </div>
+            
+            <button id="start-btn" class="btn pulse">
+                <span>Launch Quiz</span>
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        
+        <div class="quiz-questions" id="quiz" style="display: none;">
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+                <span class="progress-text" id="progress-text">1/10</span>
+            </div>
+            
+            <div class="question-container">
+                <div class="question-graphic">
+                    <div class="astronaut"></div>
+                </div>
+                <h2 id="question">Question goes here</h2>
+            </div>
+            
+            <div class="options" id="options">
+                <!-- Options will be inserted here by JavaScript -->
+            </div>
+            
+            <button id="next-btn" class="btn" style="display: none;">
+                <span>Next Question</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+        
+        <div class="quiz-result" id="result" style="display: none;">
+            <div class="result-graphic">
+                <div class="rocket"></div>
+                <div class="explosion"></div>
+                <div class="stars-result"></div>
+            </div>
+            
+            <h2>Mission Complete!</h2>
+            <div class="result-score">
+                <span class="score-label">Your Cosmic Score:</span>
+                <span class="score-value" id="final-score">0</span>
+                <span class="score-total">/100</span>
+            </div>
+            
+            <div class="result-details">
+                <div class="detail correct">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Correct: <span id="correct">0</span></span>
+                </div>
+                <div class="detail incorrect">
+                    <i class="fas fa-times-circle"></i>
+                    <span>Incorrect: <span id="incorrect">0</span></span>
+                </div>
+            </div>
+            
+            <button id="restart-btn" class="btn">
+                <i class="fas fa-redo"></i>
+                <span>New Mission</span>
+            </button>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
