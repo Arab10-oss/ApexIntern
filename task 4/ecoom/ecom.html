@@ -12,7 +12,7 @@
         <div class="top-bar">
             <div class="container">
                 <div class="contact-info">
-                    <span><i class="fas fa-phone"></i> +1 (234) 567-8900</span>
+                    <span><i class="fas fa-phone"></i> +91 9873527291</span>
                     <span><i class="fas fa-envelope"></i> hello@groceryhub.com</span>
                 </div>
                 <div class="auth-links">
@@ -49,36 +49,41 @@
 
     <main>
         <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Fresh Groceries Delivered to Your Door</h1>
-                    <p>Shop the freshest produce, dairy, meats and more with convenient home delivery</p>
-                    <a href="#products" class="btn">Shop Now</a>
-                </div>
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Fresh Groceries Delivered to Your Door</h1>
+                <p>Shop the freshest produce, dairy, meats and more with convenient home delivery</p>
+                <a href="#products" class="btn">Shop Now</a>
             </div>
-        </section>
+            <div class="hero-image">
+                <img src="image/360_F_335745675_MaxYxSsadrviZdThITuHB2oCohYOiwEu.jpg" alt="Fresh Groceries">
+            </div>
+        </div>
+    </div>
+</section>
 
         <section class="categories">
             <div class="container">
                 <h2 class="section-title">Shop by Category</h2>
                 <div class="category-grid">
                     <div class="category-card">
-                        <img src="https://via.placeholder.com/300x200?text=Fruits" alt="Fruits">
+                        <img src="image/download.jpeg" alt="Fruits">
                         <h3>Fresh Fruits</h3>
                         <a href="#" class="btn btn-small">View All</a>
                     </div>
                     <div class="category-card">
-                        <img src="https://via.placeholder.com/300x200?text=Vegetables" alt="Vegetables">
+                        <img src="image/download (1).jpeg" alt="Vegetables">
                         <h3>Vegetables</h3>
                         <a href="#" class="btn btn-small">View All</a>
                     </div>
                     <div class="category-card">
-                        <img src="https://via.placeholder.com/300x200?text=Dairy" alt="Dairy">
+                        <img src="image/download (5).jpeg" alt="Dairy">
                         <h3>Dairy & Eggs</h3>
                         <a href="#" class="btn btn-small">View All</a>
                     </div>
                     <div class="category-card">
-                        <img src="https://via.placeholder.com/300x200?text=Meat" alt="Meat">
+                        <img src="image/download (6).jpeg" alt="Meat">
                         <h3>Meat & Poultry</h3>
                         <a href="#" class="btn btn-small">View All</a>
                     </div>
@@ -117,7 +122,7 @@
                 <h2 class="section-title">Deal of the Day</h2>
                 <div class="deal-content">
                     <div class="deal-image">
-                        <img src="https://via.placeholder.com/500x400?text=Special+Offer" alt="Deal of the Day">
+                        <img src="image/download (7).jpeg" alt="Deal of the Day">
                         <div class="deal-badge">50% OFF</div>
                     </div>
                     <div class="deal-info">
@@ -236,6 +241,49 @@
             </div>
         </div>
     </footer>
+    <!-- Cart Modal -->
+<div class="cart-modal" id="cart-modal">
+    <div class="cart-content">
+        <div class="cart-header">
+            <h3>Your Shopping Cart</h3>
+            <span class="close-cart">&times;</span>
+        </div>
+        <div class="cart-body" id="cart-body">
+            <!-- Cart items will be displayed here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <h4>Total: $<span id="cart-total">0.00</span></h4>
+            </div>
+            <div class="cart-actions">
+                <button class="btn btn-secondary" id="clear-cart">Clear Cart</button>
+                <button class="btn" id="print-bill">Print Bill</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Print Area (hidden until printing) -->
+<div id="print-area" style="display: none;">
+    <div class="print-header">
+        <h2>GroceryHub</h2>
+        <p>123 Grocery St, Foodville</p>
+        <p>Phone: +1 (234) 567-8900</p>
+        <p>Date: <span id="print-date"></span></p>
+    </div>
+    <div class="print-body">
+        <h3>Order Summary</h3>
+        <table id="print-items">
+            <!-- Items will be added here when printing -->
+        </table>
+        <div class="print-total">
+            <p>Total: $<span id="print-total">0.00</span></p>
+        </div>
+    </div>
+    <div class="print-footer">
+        <p>Thank you for shopping with us!</p>
+    </div>
+</div>
 
     <script src="script.js"></script>
 </body>

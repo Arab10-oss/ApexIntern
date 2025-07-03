@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded - initializing GroceryHub'); // Debug log
+
     // Sample product data
     const products = [
         {
@@ -94,7 +96,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const sortBy = document.getElementById('sort-by');
 
     function displayProducts(productsToDisplay) {
+        console.log('Displaying products:', productsToDisplay.length);
         productGrid.innerHTML = '';
+        
+        if (productsToDisplay.length === 0) {
+            productGrid.innerHTML = '<p class="no-products">No products found matching your criteria</p>';
+            return;
+        }
         
         productsToDisplay.forEach(product => {
             const productCard = document.createElement('div');
@@ -126,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             productCard.innerHTML = `
                 <div class="product-image">
-                    <img src="${product.image}" alt="${product.name}">
+                    <img src="${product.image}" alt="${product.name}" onerror="this.src='https://via.placeholder.com/300?text=Product+Image'">
                     ${badge}
                 </div>
                 <div class="product-info">
@@ -140,7 +148,6 @@ document.addEventListener('DOMContentLoaded', function() {
             productGrid.appendChild(productCard);
         });
         
-        // Add event listeners to "Add to Cart" buttons
         document.querySelectorAll('.add-to-cart').forEach(button => {
             button.addEventListener('click', function() {
                 const productId = parseInt(this.getAttribute('data-id'));
@@ -150,19 +157,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Filter and sort products
     function filterAndSortProducts() {
         const category = categoryFilter.value;
         const sort = sortBy.value;
         
         let filteredProducts = [...products];
         
-        // Filter by category
         if (category !== 'all') {
             filteredProducts = filteredProducts.filter(product => product.category === category);
         }
         
-        // Sort products
         switch(sort) {
             case 'price-low':
                 filteredProducts.sort((a, b) => a.price - b.price);
@@ -174,7 +178,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 filteredProducts.sort((a, b) => a.name.localeCompare(b.name));
                 break;
             default:
-                // No sorting or default sorting
                 break;
         }
         
@@ -228,7 +231,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             cartItem.innerHTML = `
                 <div class="cart-item-info">
-                    <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+                    <img src="${item.image}" alt="${item.name}" class="cart-item-image" onerror="this.src='https://via.placeholder.com/100?text=Product'">
                     <div class="cart-item-details">
                         <div class="cart-item-title">${item.name}</div>
                         <div class="cart-item-price">$${item.price.toFixed(2)}</div>

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GroceryHub - India's Online Grocery Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> +91 9876543210</span>
+                    <span><i class="fas fa-envelope"></i> support@groceryhub.in</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Track Order</span>
+                </div>
+                <div class="auth-links">
+                    <a href="#"><i class="fas fa-user"></i> Login</a>
+                    <a href="#"><i class="fas fa-user-plus"></i> Register</a>
+                    <span>हिंदी</span>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-shopping-basket"></i>
+                    <span>GroceryHub</span>
+                    <span class="india-flag">भारत</span>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for groceries...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="nav-icons">
+                    <a href="#"><i class="fas fa-heart"></i> Wishlist</a>
+                    <a href="#" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <div class="hamburger">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Fresh Groceries Delivered to Your Doorstep</h1>
+                        <p>India's favorite online grocery store with 5000+ products at best prices</p>
+                        <div class="hero-buttons">
+                            <a href="#products" class="btn">Shop Now</a>
+                            <a href="#" class="btn btn-outline">Download App</a>
+                        </div>
+                        <div class="app-badges">
+                            <img src="https://via.placeholder.com/150x50?text=Google+Play" alt="Google Play">
+                            <img src="https://via.placeholder.com/150x50?text=App+Store" alt="App Store">
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="image/360_F_335745675_MaxYxSsadrviZdThITuHB2oCohYOiwEu.jpg" alt="Online Grocery Shopping India">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories">
+            <div class="container">
+                <h2 class="section-title">Shop by Category</h2>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Fruits">
+                        <h3>Fresh Fruits</h3>
+                        <a href="#" class="btn btn-small">Shop Now</a>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Vegetables">
+                        <h3>Vegetables</h3>
+                        <a href="#" class="btn btn-small">Shop Now</a>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Dairy">
+                        <h3>Dairy & Eggs</h3>
+                        <a href="#" class="btn btn-small">Shop Now</a>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Meat">
+                        <h3>Meat & Poultry</h3>
+                        <a href="#" class="btn btn-small">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+<section class="products" id="products">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Featured Products</h2>
+            <div class="filter-options">
+                <select id="category-filter">
+                    <option value="all">All Categories</option>
+                    <option value="fruits">Fruits</option>
+                    <option value="vegetables">Vegetables</option>
+                    <option value="dairy">Dairy</option>
+                    <option value="meat">Meat</option>
+                </select>
+                <select id="sort-by">
+                    <option value="default">Sort By</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="name">Name: A-Z</option>
+                </select>
+            </div>
+        </div>
+        <div class="product-grid" id="product-grid">
+        </div>
+    </div>
+</section>
+
+        <section class="deal-of-the-day">
+            <div class="container">
+                <h2 class="section-title">Deal of the Day</h2>
+                <div class="deal-content">
+                    <div class="deal-image">
+                        <img src="https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Deal of the Day">
+                        <div class="deal-badge">50% OFF</div>
+                    </div>
+                    <div class="deal-info">
+                        <h3>Fresh Alphonso Mangoes (1kg)</h3>
+                        <div class="price">
+                            <span class="original-price">₹800</span>
+                            <span class="sale-price">₹399</span>
+                        </div>
+                        <p>Premium Ratnagiri Alphonso mangoes, limited seasonal offer! Enjoy the king of fruits at unbeatable price.</p>
+                        <div class="countdown">
+                            <h4>Offer ends in:</h4>
+                            <div class="timer">
+                                <span id="hours">12</span>h
+                                <span id="minutes">45</span>m
+                                <span id="seconds">30</span>s
+                            </div>
+                        </div>
+                        <button class="btn">Add to Cart</button>
+                        <div class="delivery-info">
+                            <i class="fas fa-truck"></i> Free delivery on orders above ₹500
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"The quality of fruits and vegetables is always fresh, just like local market but with convenience of home delivery!"</p>
+                        <div class="customer">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Customer">
+                            <div>
+                                <span>Priya Sharma</span>
+                                <small>Mumbai</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p>"I love the early morning delivery option. My groceries arrive fresh at 7am before I leave for work."</p>
+                        <div class="customer">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Customer">
+                            <div>
+                                <span>Rahul Patel</span>
+                                <small>Delhi</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Best prices compared to other online grocers. The subscription for daily milk is very convenient."</p>
+                        <div class="customer">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Customer">
+                            <div>
+                                <span>Ananya Reddy</span>
+                                <small>Bangalore</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-truck"></i>
+                        <h3>Free Delivery</h3>
+                        <p>On orders above ₹500</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-exchange-alt"></i>
+                        <h3>Easy Returns</h3>
+                        <p>10-day return policy</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>100% Authentic</h3>
+                        <p>Quality guaranteed</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-rupee-sign"></i>
+                        <h3>Cash on Delivery</h3>
+                        <p>Pay when you receive</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>GroceryHub</h3>
+                    <p>India's favorite online grocery store with best prices and fastest delivery.</p>
+                    <div class="app-download">
+                        <p>Download our app:</p>
+                        <div class="app-badges">
+                            <img src="https://via.placeholder.com/120x40?text=Google+Play" alt="Google Play">
+                            <img src="https://via.placeholder.com/120x40?text=App+Store" alt="App Store">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Offers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#">Fruits & Vegetables</a></li>
+                        <li><a href="#">Dairy & Eggs</a></li>
+                        <li><a href="#">Meat & Fish</a></li>
+                        <li><a href="#">Grocery & Staples</a></li>
+                        <li><a href="#">Snacks & Beverages</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Help & Support</h3>
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Returns Policy</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 MG Road, Mumbai - 400001</li>
+                        <li><i class="fas fa-phone"></i> +91 9876543210</li>
+                        <li><i class="fas fa-envelope"></i> support@groceryhub.in</li>
+                        <li><i class="fas fa-clock"></i> 8AM - 10PM, 365 days</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="payment-methods">
+                    <p>We accept:</p>
+                    <div class="payment-icons">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <i class="fas fa-money-bill-wave"></i>
+                        <i class="fas fa-wallet"></i>
+                        <img src="https://via.placeholder.com/40x25?text=UPI" alt="UPI">
+                        <img src="https://via.placeholder.com/40x25?text=Paytm" alt="Paytm">
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2023 GroceryHub. All Rights Reserved.</p>
+                    <div class="legal-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms & Conditions</a>
+                        <a href="#">Shipping Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Your Shopping Cart (<span class="cart-items-count">0</span> items)</h3>
+                <span class="close-cart">&times;</span>
+            </div>
+            <div class="cart-body" id="cart-body">
+                <!-- Cart items will be displayed here -->
+            </div>
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span>₹<span id="cart-subtotal">0.00</span></span>
+                </div>
+                <div class="summary-row">
+                    <span>Delivery Charge:</span>
+                    <span>₹<span id="cart-delivery">40.00</span></span>
+                </div>
+                <div class="delivery-message" id="delivery-message">
+                    Add ₹500 more for free delivery
+                </div>
+                <div class="summary-total">
+                    <span>Total Amount:</span>
+                    <span>₹<span id="cart-total">40.00</span></span>
+                </div>
+            </div>
+            <div class="payment-options">
+                <h4>Select Payment Method:</h4>
+                <div class="payment-methods">
+                    <div class="payment-method" id="cod-option">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <span>Cash on Delivery</span>
+                    </div>
+                    <div class="payment-method" id="online-payment-option">
+                        <i class="fas fa-credit-card"></i>
+                        <span>Online Payment</span>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-actions">
+                <button class="btn btn-secondary" id="clear-cart">Clear Cart</button>
+                <button class="btn" id="checkout-btn">Proceed to Checkout</button>
+                <button class="btn" id="print-bill">Print Bill</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Print Area (hidden until printing) -->
+    <div id="print-area" style="display: none;">
+        <div class="print-header">
+            <h2>GroceryHub</h2>
+            <p>123 MG Road, Mumbai - 400001</p>
+            <p>Phone: +91 9876543210 | Email: support@groceryhub.in</p>
+            <p>GSTIN: 22ABCDE1234F1Z5</p>
+            <p>Date: <span id="print-date"></span></p>
+        </div>
+        <div class="print-body">
+            <h3>Order Summary</h3>
+            <table id="print-items">
+                <!-- Items will be added here when printing -->
+            </table>
+            <div class="print-summary">
+                <div class="print-summary-row">
+                    <span>Subtotal:</span>
+                    <span>₹<span id="print-subtotal">0.00</span></span>
+                </div>
+                <div class="print-summary-row">
+                    <span>Delivery Charge:</span>
+                    <span>₹<span id="print-delivery">0.00</span></span>
+                </div>
+                <div class="print-summary-row">
+                    <span>GST (5%):</span>
+                    <span>₹<span id="print-gst">0.00</span></span>
+                </div>
+                <div class="print-total">
+                    <span>Total Amount:</span>
+                    <span>₹<span id="print-total">0.00</span></span>
+                </div>
+            </div>
+        </div>
+        <div class="print-footer">
+            <p>Thank you for shopping with us!</p>
+            <p>Please keep this invoice for any returns or exchanges</p>
+        </div>
+    </div>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
